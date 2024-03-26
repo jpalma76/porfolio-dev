@@ -1,0 +1,60 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Badge from '@/components/Badge.astro';
+import LinkedinIcon from '@/components/icons/LinkedinIcon.astro';
+import GithubIcon from '@/components/icons/Github.astro';
+import Briefcase from '@/components/Briefcase.astro';
+import SocialPill from '@/components/SocialPill.astro';
+import MailIcon from '@/components/icons/Mail.astro';
+import Experience from '@/components/Experience.astro';
+import SectionContainer from '@/components/SectionContainer.astro';
+
+---
+
+<Layout 
+	title="Portfolio de jpalma76 - Desarrollador y Programador Web con 2 años de experiencia"
+	description="Contrata a jpalma76 para crear y desarrollar tu aplicación web o móvil"
+	>
+	<main class="mx-16  mb-6">
+
+		<SectionContainer>
+			<h1 
+				class="text-white text-4xl font-bold flex justify-center flex-row gap-x-4 mb-4"
+			>
+				Hey, soy Juan Palma <div class="flex justify-center items-center text-center"><Badge>Disponible para Trabajar</Badge></div>
+			</h1>
+			<h2 class="text-left">
+				<span class="text-yellow-200/90">2 años de experiencia como Desarrollador Web</span>, especializado en Frontend, de <span class="text-red-200/60">Santiago de Chile</span>, este portfolio fue hecho con <span class="font-semibold text-blue-700/80">Astro y Tailwind, Flowbite</span>.
+			</h2>
+			
+
+
+			<nav class="flex gap-x-2 mt-8 justify-center">
+
+				<SocialPill href="https://www.linkedin.com/in/juan-palma-alvarez/">
+					<LinkedinIcon class="size-4"/>
+					Linkedin
+				</SocialPill>
+
+				<SocialPill href="https://github.com/jpalma76">
+					<GithubIcon class="size-4"/>
+					GitHub
+				</SocialPill>
+
+				<SocialPill href="mailto:juan.palma.alvarez@gmail.com">
+					<MailIcon class="size-4"/>
+					Email
+				</SocialPill>
+			</nav>
+			<p class=" mt-16"><i class="text-sm text-stone-400 font-sans text-justify">La idea de este protafolio está sacada de un proyecto de <span class="font-bold text-gray-300/60">Miguel angel Durán @Midudev</span>, yo en lo personal todavía no tengo experiencia profesional desarrollando sitios web más que mis proyectos personales, pero el formato me gustó y todo sirve para aprender.</i></p>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibolt mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7"/>
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+	</main>
+</Layout>
