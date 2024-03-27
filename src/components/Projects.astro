@@ -1,30 +1,62 @@
 ---
+import NextJS from "./icons/NextJS.astro"
+import Tailwind from "./icons/Tailwind.astro"
+
+const TAGS = {
+  NEXT: {
+    name: 'Next.js',
+    class: 'bg-black text-white',
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: 'Tailwind CSS',
+    class: 'bg-white text-[#73bcf6]',
+    icon: Tailwind,
+  }
+}
+
 const PROJECTS = [
   {
-    title: 'Project 1',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum placeat ex ullam, nam alias?',
-    link: "#",
-    github:"#",
-    image: "imagen.jpg",
-    tags: ['HTML','CSS','JavaScript']
+    title: 'SVGL - A beatifull library with SVG logos & icons',
+    description: "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
+    link: "https://svgl.vercel.app/",
+    github:"https://github.com/pheralb/svgl",
+    image: "../projects/proyecto1.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND]
   }
 ]
 ---
 
-<ol class="relative border-s border-gray-200 ml-2.5">
+<ul class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({image, title, description, tags}) => (
       <article>
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <ul>
-          {tags.map(tag => {
-            return <li>{tag}</li>
+        <h3 class="text-xl font-semibold text-yellow-200">
+          {title}
+        </h3>
+        
+        <p class="text-lg mb4-text-pretty mb-4">
+          {description}
+        </p>
+        
+        <ul class="flex gap-2 flex-row mb-2">
+          {tags.map((tag) => {
+            return (
+              <li class="mb-4">
+                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                  <tag.icon class="size-4" />{tag.name}
+                </span>
+              </li>
+              )
             })
           }
         </ul>
-        <img src={image} alt=`Captura de pantalla del proyecto ${image}`>
+
+        <img 
+          class="rounded shadow-slate-100 w-300 h-200 mx-auto mt-5" 
+          src={image} alt=`Captura de pantalla del proyecto ${image}`
+        />
       </article>
     ))
   }
-</ol>
+</ul>
