@@ -1,0 +1,30 @@
+---
+const PROJECTS = [
+  {
+    title: 'Project 1',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum placeat ex ullam, nam alias?',
+    link: "#",
+    github:"#",
+    image: "imagen.jpg",
+    tags: ['HTML','CSS','JavaScript']
+  }
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-2.5">
+  {
+    PROJECTS.map(({image, title, description, tags}) => (
+      <article>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <ul>
+          {tags.map(tag => {
+            return <li>{tag}</li>
+            })
+          }
+        </ul>
+        <img src={image} alt=`Captura de pantalla del proyecto ${image}`>
+      </article>
+    ))
+  }
+</ol>

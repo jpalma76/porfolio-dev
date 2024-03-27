@@ -8,41 +8,46 @@ import SocialPill from '@/components/SocialPill.astro';
 import MailIcon from '@/components/icons/Mail.astro';
 import Experience from '@/components/Experience.astro';
 import SectionContainer from '@/components/SectionContainer.astro';
+import CodeIcon from '@/components/icons/CodeIcon.astro';
+import Projects from '@/components/Projects.astro';
 
 ---
 
 <Layout 
-	title="Portfolio de jpalma76 - Desarrollador y Programador Web con 2 años de experiencia"
-	description="Contrata a jpalma76 para crear y desarrollar tu aplicación web o móvil"
+	title="Portfolio de Juan Palma jpalma76 - Desarrollador y Programador Web con 2 años de experiencia"
+	description="Contrata a Juan Palma <jpalma76> para crear y desarrollar tu aplicación web o móvil"
 	>
-	<main class="mx-16  mb-6">
+	<main class="mx-16 px-4">
 
 		<SectionContainer>
+			<img 
+			class="rounded-full size-12 mb-2" 
+			src="https://portafolio-juan-palma.netlify.app/images/foto-mia.jpeg" 
+			alt="mi foto"
+		/>
 			<h1 
-				class="text-white text-4xl font-bold flex justify-center flex-row gap-x-4 mb-4"
+				class="text-white text-3xl md_text-4xl lg:text-4xl font-bold flex gap-x-4 mb-4 pb-6 lg:pb-10"
 			>
-				Hey, soy Juan Palma <div class="flex justify-center items-center text-center"><Badge>Disponible para Trabajar</Badge></div>
+				Hey, soy Juan Palma, Desarrollador Frontend <div class="flex justify-center items-center text-center"><Badge>Disponible para Trabajar</Badge></div>
 			</h1>
-			<h2 class="text-left">
-				<span class="text-yellow-200/90">2 años de experiencia como Desarrollador Web</span>, especializado en Frontend, de <span class="text-red-200/60">Santiago de Chile</span>, este portfolio fue hecho con <span class="font-semibold text-blue-700/80">Astro y Tailwind, Flowbite</span>.
+			<h2 class="text-xl md:text-2xl max-w-[750px] text-pretty">
+				+2 años de experiencia como <span class="text-yellow-200/90">Desarrollador Web</span>, especializado en Frontend, de <span class="text-red-200/60">Santiago de Chile</span>, este portfolio fue realizado con <span class="font-semibold text-blue-600/90">Astro, Tailwind y Flowbite</span>
 			</h2>
-			
 
-
-			<nav class="flex gap-x-2 mt-8 justify-center">
+			<nav class="flex gap-2 mt-8 flex-wrap">
 
 				<SocialPill href="https://www.linkedin.com/in/juan-palma-alvarez/">
-					<LinkedinIcon class="size-4"/>
+					<LinkedinIcon class="size-4 lg:size-6"/>
 					Linkedin
 				</SocialPill>
 
 				<SocialPill href="https://github.com/jpalma76">
-					<GithubIcon class="size-4"/>
+					<GithubIcon class="size-4 lg:size-6"/>
 					GitHub
 				</SocialPill>
 
 				<SocialPill href="mailto:juan.palma.alvarez@gmail.com">
-					<MailIcon class="size-4"/>
+					<MailIcon class="size-4 lg:size-6"/>
 					Email
 				</SocialPill>
 			</nav>
@@ -51,10 +56,18 @@ import SectionContainer from '@/components/SectionContainer.astro';
 
 		<SectionContainer id="experiencia">
 			<h2 class="text-2xl font-semibolt mb-6 flex gap-x-3 items-center">
-				<Briefcase class="size-7"/>
+				<Briefcase class="size-6"/>
 				Experiencia laboral
 			</h2>
 			<Experience />
+		</SectionContainer>
+		
+		<SectionContainer id="proyectos">
+			<h2 class="text-2xl font-semibolt mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>

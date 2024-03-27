@@ -3,10 +3,17 @@ import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
   {
+    date: "Actualmente",
+    title: "Realización de cursos y proyectos sacados de Youtube",
+    description:
+      "Realización de proyectos en Astro y React de Youtube para aprender nuevas tecnologías, técnicas y herramientas de programación ",
+    link: "#",
+  },
+  {
     date: "2023",
     title: "Realización varios cursos de programación",
     description:
-      "Realización de varios cursos de programación web en Platzi y el programa Jóvenes Programadores de Biblioredes",
+      "Realización de forma exitosa de varios cursos de programación web en la plataforma Platzi y en el programa Jóvenes Programadores de Biblioredes",
     link: "#",
   },
   {
@@ -19,7 +26,7 @@ const EXPERIENCE = [
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 ml-2.5">
   {
     EXPERIENCE.map(experience => {
       return <li class="mb-10 ms-4">
