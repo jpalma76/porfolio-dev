@@ -1,28 +1,40 @@
 ---
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
+import Html from "./icons/Html.astro"
+import Css from "./icons/Css.astro"
+import Javascript from "./icons/Javascript.astro"
+import JQuery from "./icons/JQuery.astro"
 
 const TAGS = {
-  NEXT: {
-    name: 'Next.js',
-    class: 'bg-black text-white',
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: 'Tailwind CSS',
+  HTML: {
+    name: 'HTML',
     class: 'bg-white text-[#73bcf6]',
-    icon: Tailwind,
+    icon: Html 
+  },
+  CSS: {
+    name: 'CSS3',
+    class: 'bg-white text-[#73bcf6]',
+    icon: Css,
+  },
+  JAVASCRIPT: {
+    name: 'JavaScript',
+    class: 'bg-white text-[#73bcf6]',
+    icon: Javascript,
+  },
+  JQUERY: {
+    name: 'JQuery',
+    class: 'bg-white text-[#73bcf6]',
+    icon: JQuery,
   }
 }
 
 const PROJECTS = [
   {
-    title: 'SVGL - A beatifull library with SVG logos & icons',
-    description: "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
-    link: "https://svgl.vercel.app/",
-    github:"https://github.com/pheralb/svgl",
-    image: "../projects/proyecto1.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND]
+    title: 'Portfolio realizado con html, css y javascript',
+    description: "Creado rginalmente con html y css, posteriormente se utliza JavaScript renderizando los cursos utilizando distintas técnicas de renderizado dinámicos como fetch, jquery y foreach desde un array.",
+    link: "https://portafolio-juan-palma.netlify.app/",
+    github:"https://github.com/jpalma76/portafolio",
+    image: "../projects/primer-portfolio-web.png",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.JQUERY]
   }
 ]
 ---
@@ -52,10 +64,16 @@ const PROJECTS = [
           }
         </ul>
 
-        <img 
-          class="rounded shadow-slate-100 w-300 h-200 mx-auto mt-5" 
-          src={image} alt=`Captura de pantalla del proyecto ${image}`
-        />
+        <a 
+          href={PROJECTS[0].link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img 
+            class="rounded-md opacity-50 w-300 h-auto mx-auto mt-3" 
+            src={image} alt={`Captura de pantalla del proyecto ${image}`}
+          />
+          </a>
       </article>
     ))
   }
