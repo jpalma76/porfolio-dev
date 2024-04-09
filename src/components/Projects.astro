@@ -55,7 +55,7 @@ const PROJECTS = [
           {tags.map((tag) => {
             return (
               <li class="mb-4">
-                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1.5 px-4`}>
                   <tag.icon class="size-4" />{tag.name}
                 </span>
               </li>
@@ -70,7 +70,7 @@ const PROJECTS = [
           rel="noopener noreferrer"
         >
           <img 
-            class="rounded-md opacity-50 w-300 h-auto mx-auto mt-3" 
+            class="rounded-xl opacity-80 w-300 h-auto mx-auto mt-5" 
             src={image} alt={`Captura de pantalla del proyecto ${image}`}
           />
           </a>
