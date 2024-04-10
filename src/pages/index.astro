@@ -18,24 +18,27 @@ import Projects from '@/components/Projects.astro';
 	title="Portfolio de Juan Palma (jpalma76) - Desarrollador y Programador Web con 2 años de experiencia"
 	description="Desarrollo Frontend Contactame para crear y desarrollar tu aplicación web o móvil."
 	>
-	<main class="mx-auto px-16">
+	<main class="mx-20 md:30">
 
-		<SectionContainer class="mt-10 flex flex-col items-center" id="sobre-mi">
+		<SectionContainer class="mt-10 flex flex-col" id="sobre-mi">
 			<img 
-			class="rounded-full size-20 mb-2" 
-			src="https://portafolio-juan-palma.netlify.app/images/foto-mia.jpeg" 
-			alt="mi foto"
-		/>
-			<h1 
-				class="text-white text-2xl lg:text-3xl font-bold flex gap-x-3 mb-4 pt-10 pb-6 lg:pb-10"
-			>
-				Hey, soy Juan Palma, desarrollador Frontend <div class="flex justify-center items-center text-center"><Badge>Disponible para Trabajar</Badge></div>
-			</h1>
-			<h2 class="text-xl md:text-2xl max-w-[750px] text-pretty">
-				+2 años de experiencia como <span class="text-yellow-200/90">Desarrollador Web</span>, especializado en Frontend, de <span class="text-red-200/60">Santiago de Chile</span>, este portfolio fue realizado con <span class="font-semibold text-blue-600/90">Astro, Tailwind y Flowbite</span>
-			</h2>
+				class="rounded-full size-20 mb-2" 
+				src="https://portafolio-juan-palma.netlify.app/images/foto-mia.jpeg" 
+				alt="mi foto"
+			/>
 
-			<nav class="flex gap-2 mt-8 flex-wrap">
+			<article class="w-full text-white text-3xl lg:text-3xl font-bold flex flex-col justify-center text-left gap-x-3 mb-4 pt-10 pb-6 lg:pb-10">
+				<h1 class="text-5xl mb-5">Hey, soy Juan Palma,</h1>
+				<div class="flex items-center justify-between">
+					desarrollador Frontend <span class="flex justify-end"><Badge>Disponible para Trabajar</Badge></span>
+				</div>
+			</article>
+
+			<article class="text-xl md:text-2xl max-w-[750px] text-pretty">
+				+2 años de experiencia como <span class="text-yellow-200/90">Desarrollador Web</span>, especializado en Frontend, de <span class="text-red-200/60">Santiago de Chile</span>, este portfolio fue realizado con <span class="font-semibold text-blue-600/90">Astro, Tailwind y Flowbite</span>
+			</article>
+
+			<article class="w-full flex gap-4 pt-10 flex-wrap">
 
 				<SocialPill href="https://www.linkedin.com/in/juan-palma-alvarez/">
 					<LinkedinIcon class="size-4 lg:size-6"/>
@@ -51,7 +54,8 @@ import Projects from '@/components/Projects.astro';
 					<MailIcon class="size-4 lg:size-6"/>
 					Email
 				</SocialPill>
-			</nav>
+			</article>
+
 			<p class=" mt-16"><i class="text-sm text-stone-400 font-sans text-justify">La idea de este protafolio está sacada de un proyecto de <span class="font-bold text-gray-300/60">* Miguel angel Durán @Midudev *</span>, yo en lo personal todavía no tengo experiencia profesional desarrollando sitios web más que mis proyectos personales, pero el formato me gustó y todo sirve para aprender.</i></p>
 		</SectionContainer>
 
