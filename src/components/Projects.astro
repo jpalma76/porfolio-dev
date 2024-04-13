@@ -55,8 +55,8 @@ const PROJECTS = [
           {tags.map((tag) => {
             return (
               <li class="my-4">
-                <span class={`flex gap-x-2 rounded-full text-sm md:text-xs ${tag.class} py-1 px-2`}>
-                  <tag.icon class="size-4 rounded-sm" />{tag.name}
+                <span class={`flex gap-x-2 rounded-full text-md ${tag.class} max-w-[140px] py-2 justify-center`}>
+                  <tag.icon class="size-6 rounded-sm" />{tag.name}
                 </span>
               </li>
               )
