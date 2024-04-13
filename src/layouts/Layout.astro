@@ -21,7 +21,7 @@ const { description, title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="w-full justify-center mx-0 md:mx-auto " >
+	<body class="w-full justify-center">
 		<Header />
 		<slot />
 		<Footer/>
@@ -41,7 +41,6 @@ const { description, title } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		min-height: 100vh;
 	}
 	@media (prefers-reduced-motion: reduce) {
 		html {
