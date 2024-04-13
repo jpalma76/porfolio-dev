@@ -1,6 +1,5 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import Badge from '@/components/Badge.astro';
 import LinkedinIcon from '@/components/icons/LinkedinIcon.astro';
 import GithubIcon from '@/components/icons/Github.astro';
 import Briefcase from '@/components/Briefcase.astro';
@@ -10,6 +9,7 @@ import Experience from '@/components/Experience.astro';
 import SectionContainer from '@/components/SectionContainer.astro';
 import CodeIcon from '@/components/icons/CodeIcon.astro';
 import Projects from '@/components/Projects.astro';
+import Footer from '@/components/Footer.astro';
 
 
 ---
@@ -18,7 +18,7 @@ import Projects from '@/components/Projects.astro';
 	title="Portfolio de Juan Palma (jpalma76) - Desarrollador y Programador Web con 2 años de experiencia"
 	description="Desarrollo Frontend Contactame para crear y desarrollar tu aplicación web o móvil."
 	>
-	<main class="mx-20 md:30">
+	<main class="mx-[17%] md:mx-auto max-w-[700px]">
 
 		<SectionContainer class="mt-10 flex flex-col" id="sobre-mi">
 			<img 
@@ -27,15 +27,19 @@ import Projects from '@/components/Projects.astro';
 				alt="mi foto"
 			/>
 
-			<article class="w-full text-white text-3xl lg:text-3xl font-bold flex flex-col justify-center text-left gap-x-3 mb-4 pt-10 pb-6 lg:pb-10">
-				<h1 class="text-5xl mb-5">Hey, soy Juan Palma,</h1>
-				<div class="flex items-center justify-between">
-					desarrollador Frontend <span class="flex justify-end"><Badge>Disponible para Trabajar</Badge></span>
+			<article class="w-full text-white text-2xl font-bold flex flex-col justify-center text-left gap-x-4 mb-4 pt-10 pb-6">
+				<!-- Saludo -->
+				<h1 class="text-5xl mb-5">Hey, soy Juan Palma</h1>
+				<!-- Presentacion -->
+				<div class="flex justify-between">
+					<span>Desarrollador Frontend</span>
+					<span class="text-sm flex justify-center text-center items-center rounded-full border-gray-400 border-2 px-4">Disponible para Trabajar</span>
 				</div>
+
 			</article>
 
-			<article class="text-xl md:text-2xl max-w-[750px] text-pretty">
-				+2 años de experiencia como <span class="text-yellow-200/90">Desarrollador Web</span>, especializado en Frontend, de <span class="text-red-200/60">Santiago de Chile</span>, este portfolio fue realizado con <span class="font-semibold text-blue-600/90">Astro, Tailwind y Flowbite</span>
+			<article class="text-xl md:text-2xl text-pretty">
+				+2 años de experiencia como <span class="text-yellow-200/90">Desarrollador Web</span>, especializado en Frontend, de <span class="text-red-200/60">Santiago de Chile</span>, este porfolio fue realizado con <span class="font-semibold text-blue-600/90">Astro, Tailwind y Flowbite</span>
 			</article>
 
 			<article class="w-full flex gap-4 pt-10 flex-wrap">
@@ -56,7 +60,7 @@ import Projects from '@/components/Projects.astro';
 				</SocialPill>
 			</article>
 
-			<p class=" mt-16"><i class="text-sm text-stone-400 font-sans text-justify">La idea de este protafolio está sacada de un proyecto de <span class="font-bold text-gray-300/60">* Miguel angel Durán @Midudev *</span>, yo en lo personal todavía no tengo experiencia laboral desarrollando sitios web más que mis proyectos personales, pero el formato me gustó y todo sirve para aprender.</i></p>
+			<p class=" mt-16 text-sm text-stone-400 font-sans text-justify italic">La idea de este protafolio está sacada de un proyecto de <span class="font-bold text-gray-300/60">* Miguel angel Durán @Midudev *</span>, yo en lo personal todavía no tengo experiencia laboral desarrollando sitios web más que mis proyectos personales, pero el formato me gustó y todo sirve para aprender.</p>
 		</SectionContainer>
 
 		<SectionContainer id="experiencia">
@@ -75,5 +79,6 @@ import Projects from '@/components/Projects.astro';
 			<Projects />
 		</SectionContainer>
 
+		<Footer/>
 	</main>
 </Layout>
